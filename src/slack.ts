@@ -1,7 +1,7 @@
 import { IncomingWebhook } from '@slack/webhook';
 import { addService, MiddlewareCreator, TransportService } from '@alexshelkov/lambda';
 
-const url = 'https://hooks.slack.com/services/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';
+const url = process.env.SLACK_URL;
 
 type SlackTransportService = TransportService;
 type SlackTransportOptions = {};
