@@ -1,7 +1,13 @@
 import { ok } from '@alexshelkov/result';
-import { creator, Handler, GetService, loggerService, transportService } from '@alexshelkov/lambda';
+import {
+  creator,
+  Handler,
+  GetService,
+  loggerService
+} from '@alexshelkov/lambda';
+import slackTransportService from '../../slack';
 
-const res = creator(transportService).srv(loggerService);
+const res = creator(slackTransportService).srv(loggerService);
 
 type Service = GetService<typeof res>;
 

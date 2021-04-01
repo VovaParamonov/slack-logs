@@ -50,6 +50,12 @@ functions:
       - http:
           path: test
           method: get
+  TestPost:
+    handler: dist/handler/test/post.handle
+    events:
+      - http:
+          path: test
+          method: post
 
 
 resources:
